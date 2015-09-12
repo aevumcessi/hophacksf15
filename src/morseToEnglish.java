@@ -3,7 +3,6 @@ import java.util.*;
 public class morseToEnglish {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String[] testString = { "....", ".", ".-..", ".-..", "---", "_", ".--", "---", ".-.", ".-..", "-.."};
 		
 		String testEnglish = convert(testString);
@@ -11,9 +10,17 @@ public class morseToEnglish {
 		System.out.print(testEnglish);
 	}
 
+	/**
+	 * Converts the array of morse code created by the Myo motions to a string in English.
+	 * @param morseArray
+	 * @return
+	 */
 	static String convert(String[] morseArray) {
 		String englishString ="";
 		
+		/*Creates an English string by iterating through morseArray and sending each element to
+		 * the morseKey() function, then manually puts spaces wherever there are underscores.
+		 */
 		for(int i = 0; i < morseArray.length; i++) {
 			if(morseArray[i] != "_") {
 				englishString = englishString + morseKey(morseArray[i]);
@@ -26,6 +33,11 @@ public class morseToEnglish {
 		return englishString;
 	}
 	
+	/**
+	 * Converts all the morse code to characters in English.
+	 * @param morse
+	 * @return
+	 */
 	static char morseKey(String morse) {
 		char eng = ' ';
 		

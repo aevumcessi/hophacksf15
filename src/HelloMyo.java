@@ -21,8 +21,8 @@ public class HelloMyo
 				@Override
 				public void onPose(Myo myo, long timestamp, Pose pose) { //do all of the following things each time there is a pose
 				
-					//if (!pose.toString().contains("REST"))
-					//	System.out.println(pose.toString());
+					if (!pose.toString().contains("REST") && !pose.toString().contains("TAP"))
+						System.out.println(pose.toString());
 					
 					if (pose.toString().contains("_IN") || pose.toString().contains("_OUT") || pose.toString().contains("FIST")) 
 					{

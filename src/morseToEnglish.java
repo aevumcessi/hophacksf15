@@ -1,3 +1,6 @@
+import java.util.*;
+import com.thalmic.myo.*;
+
 public class MorseToEnglish {
 
 	public static void main(String[] args) {
